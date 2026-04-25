@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portfolio for Devansh Jamdar, cybersecurity graduate and AI assistant builder based in London."
+    />
+    <title>Devansh Jamdar | Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar" data-reveal>
+        <a class="brand" href="#home" aria-label="Devansh Jamdar home">
+          <span class="brand-mark">DJ</span>
+          <span>Devansh Jamdar</span>
+        </a>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#work">Work</a>
+          <a href="#jarvis">Jarvis</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+          <a href="#experience">Experience</a>
+        </nav>
+        <div class="contact-menu">
+          <button class="nav-cta" type="button" aria-expanded="false" aria-controls="contact-options">Contact</button>
+          <div class="contact-options" id="contact-options" aria-label="Contact options">
+            <a href="mailto:devanshjamdar67@gmail.com">
+              <span>Email</span>
+              <strong>devanshjamdar67@gmail.com</strong>
+            </a>
+            <a href="tel:+447778071565">
+              <span>Mobile</span>
+              <strong>+44 7778 071565</strong>
+            </a>
+            <a href="https://github.com/Devanshjd">
+              <span>GitHub</span>
+              <strong>github.com/Devanshjd</strong>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero section-band" id="home">
+          <div class="hero-grid">
+            <div class="hero-copy" data-reveal>
+              <p class="eyebrow">London based cybersecurity graduate</p>
+              <h1>Cybersecurity, AI systems, and practical automation.</h1>
+              <p class="hero-lede">
+                I am Devansh Jamdar, a BSc Computer Science - Cyber Security graduate
+                building security-focused machine learning projects, IoT systems, and
+                a local AI assistant called Jarvis.
+              </p>
+              <div class="hero-actions" aria-label="Primary actions">
+                <a class="button primary" href="#work">View projects</a>
+                <a class="button ghost" href="mailto:devanshjamdar67@gmail.com">Email me</a>
+              </div>
+              <dl class="quick-stats" aria-label="Profile highlights">
+                <div>
+                  <dt>Focus</dt>
+                  <dd>SOC, security, infrastructure</dd>
+                </div>
+                <div>
+                  <dt>Degree</dt>
+                  <dd>BSc Cyber Security</dd>
+                </div>
+                <div>
+                  <dt>Location</dt>
+                  <dd>London, UK</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="hero-visual" data-reveal>
+              <div class="signal-card terminal-card floating-card">
+                <div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                <p class="terminal-line"><span>$</span> scan profile --target devansh</p>
+                <p class="terminal-line ok">status: graduate-ready</p>
+                <p class="terminal-line">skills: python, linux, networking, ml-security</p>
+                <p class="terminal-line">project: jarvis local ai runtime</p>
+              </div>
+              <div class="signal-card radar-card floating-card slow">
+                <div class="radar" aria-hidden="true">
+                  <span class="radar-sweep"></span>
+                  <span class="radar-dot d1"></span>
+                  <span class="radar-dot d2"></span>
+                  <span class="radar-dot d3"></span>
+                </div>
+                <div>
+                  <p class="mini-label">Threat model</p>
+                  <strong>Observe. Detect. Respond.</strong>
+                  <span>Security thinking backed by working systems.</span>
+                </div>
+              </div>
+              <div class="signal-card stack-card floating-card delay">
+                <span>Python</span>
+                <span>Burp Suite</span>
+                <span>Scikit-learn</span>
+                <span>React</span>
+                <span>Electron</span>
+                <span>AWS EC2</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="intro section-band" aria-labelledby="profile-title">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Profile</p>
+            <h2 id="profile-title">Security foundations with builder energy.</h2>
+          </div>
+          <div class="intro-panel" data-reveal>
+            <p>
+              I have hands-on experience in network security, vulnerability assessment,
+              penetration testing fundamentals, and machine learning based threat detection.
+              I am comfortable moving between practical troubleshooting, Python automation,
+              and clear reporting under pressure.
+            </p>
+            <p>
+              I am currently seeking graduate opportunities in cybersecurity, SOC analysis,
+              and IT infrastructure, with full right to work in the UK.
+            </p>
+          </div>
+        </section>
+
+        <section class="work section-band" id="work" aria-labelledby="work-title">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Selected projects</p>
+            <h2 id="work-title">Projects that connect security, AI, and systems.</h2>
+          </div>
+
+          <div class="filter-bar" data-reveal role="tablist" aria-label="Project filters">
+            <button class="filter active" type="button" data-filter="all">All</button>
+            <button class="filter" type="button" data-filter="security">Security</button>
+            <button class="filter" type="button" data-filter="ai">AI</button>
+            <button class="filter" type="button" data-filter="systems">Systems</button>
+          </div>
+
+          <div class="project-grid">
+            <article
+              class="project-card featured"
+              data-category="ai systems security"
+              data-title="Jarvis AI Assistant"
+              data-type="Featured AI assistant build"
+              data-repo="https://github.com/Devanshjd/Jarvis"
+              data-detail="A local AI assistant platform built around an Electron desktop shell, React and TypeScript interface, Python runtime, voice bridge, planning modules, plugin boundaries, and task-learning memory. It demonstrates product thinking as well as engineering: the assistant has a usable shell, live status, chat transcript, widget surfaces, screen and voice controls, and a system for learning which procedures worked."
+              data-points="Electron desktop shell with React and TypeScript UI.|Python backend with planning, memory, tool routing, and runtime modules.|Task Brain records sanitized task episodes and reusable procedures.|Plugin system covers automation, code assist, memory, web intelligence, voice, scheduling, and file workflows."
+              data-tech="Python, React, Electron, TypeScript, Voice, Automation"
+              tabindex="0"
+              role="button"
+              data-reveal
+            >
+              <div class="project-topline">
+                <span>Featured build</span>
+                <span>AI assistant</span>
+              </div>
+              <h3>Jarvis AI Assistant</h3>
+              <p>
+                A local AI assistant platform with an Electron desktop shell, React and
+                TypeScript interface, voice bridge, plugin architecture, task memory,
+                planning logic, web automation, and runtime monitoring.
+              </p>
+              <ul class="project-points">
+                <li>Task Brain records outcomes and reusable procedures.</li>
+                <li>Plugins cover automation, code assist, memory, web intelligence, voice, and scheduling.</li>
+                <li>Desktop shell includes live status, chat transcript, widgets, system stats, and vision controls.</li>
+              </ul>
+              <div class="tech-row">
+                <span>Python</span><span>React</span><span>Electron</span><span>TypeScript</span>
+              </div>
+            </article>
+
+            <article
+              class="project-card"
+              data-category="security ai"
+              data-title="Phishing Website Detection"
+              data-type="Machine learning security project"
+              data-repo="https://github.com/Devanshjd?tab=repositories&q=phishing"
+              data-detail="A phishing URL classifier that uses engineered features from URL structure, SSL usage, and domain characteristics to separate legitimate and malicious websites. The project shows practical security feature engineering, model evaluation, and the ability to explain model performance with precision, recall, and F1-score."
+              data-points="Extracted URL and domain indicators for classification.|Compared model performance using precision, recall, and F1-score.|Focused on readable security signals instead of opaque-only prediction."
+              data-tech="Python, Scikit-learn, Pandas, Security ML"
+              tabindex="0"
+              role="button"
+              data-reveal
+            >
+              <div class="project-topline">
+                <span>Machine learning</span>
+                <span>Security</span>
+              </div>
+              <h3>Phishing Website Detection</h3>
+              <p>
+                Built a model to classify phishing and legitimate URLs using engineered
+                indicators such as URL structure, SSL usage, and domain characteristics.
+              </p>
+              <div class="tech-row"><span>Python</span><span>Scikit-learn</span><span>Pandas</span></div>
+            </article>
+
+            <article
+              class="project-card"
+              data-category="ai"
+              data-title="AI Safety Gridworlds"
+              data-type="Reinforcement learning project"
+              data-repo="https://github.com/Devanshjd?tab=repositories&q=gridworld"
+              data-detail="A reinforcement learning project inspired by DeepMind AI Safety Gridworlds. It explores how agents can learn unsafe behaviour when rewards are poorly shaped, using custom environments and Q-learning style evaluation to inspect reward-driven decisions."
+              data-points="Implemented gridworld-style environments for agent behaviour analysis.|Built Q-learning agents and evaluated reward-based decision making.|Connected AI experimentation with safety and reliability questions."
+              data-tech="Python, NumPy, Reinforcement Learning, Q-learning"
+              tabindex="0"
+              role="button"
+              data-reveal
+            >
+              <div class="project-topline">
+                <span>Reinforcement learning</span>
+                <span>AI safety</span>
+              </div>
+              <h3>AI Safety Gridworlds</h3>
+              <p>
+                Implemented DeepMind-inspired environments to analyse unsafe agent
+                behaviours and evaluate reward-based decision making with Q-learning.
+              </p>
+              <div class="tech-row"><span>Python</span><span>NumPy</span><span>Q-learning</span></div>
+            </article>
+
+            <article
+              class="project-card"
+              data-category="systems"
+              data-title="ESP32 Smart Environment Monitoring"
+              data-type="IoT and embedded systems project"
+              data-repo="https://github.com/Devanshjd?tab=repositories&q=esp32"
+              data-detail="An ESP32-based monitoring system for temperature and humidity using a DHT22 sensor. The system includes RGB LED indicators, buzzer alerts, and interrupt-driven manual override, showing embedded control logic and practical hardware feedback design."
+              data-points="Read temperature and humidity from a DHT22 sensor.|Used LED and buzzer feedback for environmental thresholds.|Implemented manual override with interrupt-driven control."
+              data-tech="ESP32, C/C++, DHT22, Embedded Systems, IoT"
+              tabindex="0"
+              role="button"
+              data-reveal
+            >
+              <div class="project-topline">
+                <span>Embedded systems</span>
+                <span>IoT</span>
+              </div>
+              <h3>ESP32 Environment Monitor</h3>
+              <p>
+                Built an ESP32 system to monitor temperature and humidity with DHT22,
+                RGB LED indicators, buzzer alerts, and interrupt-driven manual override.
+              </p>
+              <div class="tech-row"><span>ESP32</span><span>C/C++</span><span>DHT22</span></div>
+            </article>
+
+            <article
+              class="project-card"
+              data-category="ai"
+              data-title="AI Dog Breed Classification"
+              data-type="Deep learning team project"
+              data-repo="https://github.com/Devanshjd?tab=repositories&q=dog"
+              data-detail="A computer vision classifier built with an Inception-style architecture for dog breed classification. The project combined deep learning implementation with team coordination, optimisation work, and practical model evaluation."
+              data-points="Used an Inception architecture for image classification.|Contributed to model optimisation and team coordination.|Applied TensorFlow/Keras workflow to a real classification task."
+              data-tech="Python, TensorFlow, Keras, Computer Vision"
+              tabindex="0"
+              role="button"
+              data-reveal
+            >
+              <div class="project-topline">
+                <span>Deep learning</span>
+                <span>Team project</span>
+              </div>
+              <h3>Dog Breed Classification</h3>
+              <p>
+                Developed a deep learning classifier using an Inception architecture,
+                contributing to team coordination and model optimisation.
+              </p>
+              <div class="tech-row"><span>Python</span><span>TensorFlow</span><span>Keras</span></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="jarvis section-band" id="jarvis" aria-labelledby="jarvis-title">
+          <div class="jarvis-layout">
+            <div class="section-heading sticky-heading" data-reveal>
+              <p class="eyebrow">Jarvis deep dive</p>
+              <h2 id="jarvis-title">A personal AI runtime, built as a real desktop product.</h2>
+              <p>
+                Jarvis is the project that best shows how I think: local-first tools,
+                safety checks, memory, plugin boundaries, and a usable interface wrapped
+                around automation.
+              </p>
+            </div>
+            <div class="jarvis-showcase" data-reveal>
+              <div class="screen-frame">
+                <img src="./assets/jarvis-shell.png" alt="Jarvis desktop shell interface" />
+              </div>
+              <div class="capability-list">
+                <button class="capability active" type="button" data-shot="./assets/jarvis-shell.png">
+                  <span>Desktop shell</span>
+                  <small>Electron, React, live assistant panel</small>
+                </button>
+                <button class="capability" type="button" data-shot="./assets/jarvis-dashboard.png">
+                  <span>Runtime dashboard</span>
+                  <small>Status, widgets, monitoring, controls</small>
+                </button>
+                <button class="capability" type="button" data-shot="./assets/jarvis-shell.png">
+                  <span>Task learning</span>
+                  <small>Episodes, procedures, safe argument capture</small>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="skills section-band" id="skills" aria-labelledby="skills-title">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Technical stack</p>
+            <h2 id="skills-title">Tools I use to investigate, build, and explain.</h2>
+          </div>
+          <div class="skill-columns" data-reveal>
+            <div>
+              <h3>Cybersecurity and networking</h3>
+              <p>TCP/IP, DNS, DHCP, NAT, LAN/WAN troubleshooting, vulnerability assessment, basic penetration testing, SOC fundamentals.</p>
+            </div>
+            <div>
+              <h3>Programming and AI</h3>
+              <p>Python, C/C++, Scikit-learn, Pandas, NumPy, TensorFlow/Keras, reinforcement learning, AI for security.</p>
+            </div>
+            <div>
+              <h3>Systems and tools</h3>
+              <p>Linux, AWS EC2, SSH, Git, Burp Suite, Cisco Packet Tracer, GNS3, ESP32, embedded systems, IoT.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="education section-band" id="education" aria-labelledby="education-title">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Education</p>
+            <h2 id="education-title">Cybersecurity education with hands-on technical modules.</h2>
+          </div>
+          <div class="education-grid" data-reveal>
+            <article>
+              <span>2023 - 2026</span>
+              <h3>BSc (Hons) Computer Science - Cyber Security</h3>
+              <p>University of Hertfordshire, UK</p>
+              <small>Relevant modules: Network Security, Ethical Hacking, Artificial Intelligence, Operating Systems.</small>
+            </article>
+            <article>
+              <span>2018 - 2021</span>
+              <h3>Diploma in Information Technology (BSPP)</h3>
+              <p>Ganpat University, India</p>
+              <small>CGPA: 7.8/10</small>
+            </article>
+            <article>
+              <span>2021 - 2022</span>
+              <h3>Expert in Ethical Hacking (E.E.H)</h3>
+              <p>AIM Computers</p>
+              <small>Score: 92.5%</small>
+            </article>
+          </div>
+        </section>
+
+        <section class="experience section-band" id="experience" aria-labelledby="experience-title">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Experience</p>
+            <h2 id="experience-title">Operational discipline from technical and service roles.</h2>
+          </div>
+          <div class="timeline" data-reveal>
+            <article>
+              <span>May 2025 - Oct 2025</span>
+              <h3>Networking Trainee - Auroma Geotex Pvt. Ltd.</h3>
+              <p>Configured routers, switches, wireless access points, supported VPN setup, and documented network architecture.</p>
+            </article>
+            <article>
+              <span>Sep 2022 - Jul 2023</span>
+              <h3>Freelance Penetration Tester</h3>
+              <p>Performed web application vulnerability assessments with Burp Suite and Linux tools, producing reports with mitigation recommendations.</p>
+            </article>
+            <article>
+              <span>Nov 2023 - May 2025</span>
+              <h3>Customer Service Team Leader - Paddy Power</h3>
+              <p>Led daily operations, trained staff, handled escalations, and maintained compliance in a regulated high-pressure environment.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="contact section-band" aria-labelledby="contact-title">
+          <div class="contact-panel" data-reveal>
+            <p class="eyebrow">Available for graduate roles</p>
+            <h2 id="contact-title">Let’s talk about security, SOC, or infrastructure work.</h2>
+            <p>
+              Based in London with full right to work in the UK. Open to graduate
+              cybersecurity and IT roles.
+            </p>
+            <div class="contact-actions">
+              <a class="button primary" href="mailto:devanshjamdar67@gmail.com">devanshjamdar67@gmail.com</a>
+              <a class="button ghost" href="https://github.com/Devanshjd">GitHub</a>
+              <a class="button ghost" href="tel:+447778071565">+44 7778 071565</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <div class="project-modal" aria-hidden="true">
+        <div class="modal-backdrop" data-close-modal></div>
+        <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+          <button class="modal-close" type="button" data-close-modal aria-label="Close project details">x</button>
+          <p class="eyebrow modal-type">Project detail</p>
+          <h2 id="modal-title"></h2>
+          <p class="modal-detail"></p>
+          <ul class="modal-points"></ul>
+          <div class="modal-tech"></div>
+          <a class="button primary modal-repo" href="#" target="_blank" rel="noreferrer">Open GitHub repo</a>
+        </article>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
