@@ -261,6 +261,26 @@ h3 {
   margin-top: 34px;
 }
 
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.profile-links a {
+  color: var(--muted);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  transition: color 180ms ease;
+}
+
+.profile-links a:hover,
+.profile-links a:focus-visible {
+  color: var(--lime);
+}
+
 .button {
   display: inline-flex;
   min-height: 46px;
@@ -302,6 +322,7 @@ h3 {
 .project-card,
 .screen-frame,
 .capability,
+.lab-card,
 .skill-columns > div,
 .education-grid article,
 .timeline article,
@@ -587,6 +608,11 @@ h3 {
   padding-left: 18px;
 }
 
+.project-points.compact {
+  margin-top: 16px;
+  font-size: 0.92rem;
+}
+
 .tech-row {
   display: flex;
   flex-wrap: wrap;
@@ -663,6 +689,77 @@ h3 {
 .capability small {
   color: var(--muted);
   line-height: 1.45;
+}
+
+.lab-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.lab-card {
+  position: relative;
+  min-height: 330px;
+  overflow: hidden;
+  padding: 24px;
+  background:
+    linear-gradient(155deg, rgba(91, 231, 255, 0.12), rgba(183, 255, 106, 0.035) 46%, rgba(255, 255, 255, 0.02)),
+    var(--panel);
+}
+
+.lab-card::after {
+  content: "";
+  position: absolute;
+  right: -20%;
+  bottom: -25%;
+  width: 220px;
+  aspect-ratio: 1;
+  border: 1px solid rgba(91, 231, 255, 0.13);
+  border-radius: 50%;
+  background: repeating-radial-gradient(circle, transparent 0 19px, rgba(91, 231, 255, 0.08) 20px 21px);
+}
+
+.lab-card span {
+  display: block;
+  margin-bottom: 46px;
+  color: var(--lime);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+.lab-card p {
+  position: relative;
+  z-index: 1;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.lab-flow {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.lab-flow b {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.18);
+  color: #e8f5ef;
+  font-size: 0.85rem;
+}
+
+.lab-flow b::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 16px rgba(91, 231, 255, 0.7);
 }
 
 .skill-columns {
@@ -862,6 +959,7 @@ h3 {
   .hero-grid,
   .intro-panel,
   .jarvis-layout,
+  .lab-grid,
   .skill-columns,
   .education-grid {
     grid-template-columns: 1fr;
@@ -913,6 +1011,7 @@ h3 {
 
   .quick-stats,
   .project-grid,
+  .lab-grid,
   .capability-list,
   .education-grid {
     grid-template-columns: 1fr;
