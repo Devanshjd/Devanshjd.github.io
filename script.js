@@ -18,6 +18,9 @@ const filters = document.querySelectorAll('.filter')
 const projectCards = document.querySelectorAll('.project-card')
 const contactMenu = document.querySelector('.contact-menu')
 const contactButton = document.querySelector('.contact-menu .nav-cta')
+const topbar = document.querySelector('.topbar')
+const menuToggle = document.querySelector('.menu-toggle')
+const navLinks = document.querySelectorAll('.nav a')
 
 filters.forEach((button) => {
   button.addEventListener('click', () => {
@@ -33,6 +36,8 @@ filters.forEach((button) => {
 if (contactMenu && contactButton) {
   contactButton.addEventListener('click', (event) => {
     event.stopPropagation()
+    topbar?.classList.remove('menu-open')
+    menuToggle?.setAttribute('aria-expanded', 'false')
     const isOpen = contactMenu.classList.toggle('open')
     contactButton.setAttribute('aria-expanded', String(isOpen))
   })
@@ -49,6 +54,35 @@ if (contactMenu && contactButton) {
       contactMenu.classList.remove('open')
       contactButton.setAttribute('aria-expanded', 'false')
     }
+  })
+}
+
+if (topbar && menuToggle) {
+  function closeMobileMenu() {
+    topbar.classList.remove('menu-open')
+    menuToggle.setAttribute('aria-expanded', 'false')
+  }
+
+  menuToggle.addEventListener('click', (event) => {
+    event.stopPropagation()
+    const isOpen = topbar.classList.toggle('menu-open')
+    menuToggle.setAttribute('aria-expanded', String(isOpen))
+    if (isOpen) {
+      contactMenu?.classList.remove('open')
+      contactButton?.setAttribute('aria-expanded', 'false')
+    }
+  })
+
+  navLinks.forEach((link) => {
+    link.addEventListener('click', closeMobileMenu)
+  })
+
+  document.addEventListener('click', (event) => {
+    if (!topbar.contains(event.target)) closeMobileMenu()
+  })
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeMobileMenu()
   })
 }
 

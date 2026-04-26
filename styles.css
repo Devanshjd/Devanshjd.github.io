@@ -64,7 +64,7 @@ a {
   left: 50%;
   display: grid;
   width: min(1120px, calc(100% - 32px));
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr auto auto;
   gap: 22px;
   align-items: center;
   padding: 10px 10px 10px 14px;
@@ -116,6 +116,30 @@ a {
 .nav-cta:hover,
 .nav-cta:focus-visible {
   color: var(--text);
+}
+
+.menu-toggle {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 1px solid rgba(91, 231, 255, 0.3);
+  border-radius: 6px;
+  background: rgba(91, 231, 255, 0.06);
+  color: var(--cyan);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
 }
 
 .nav-cta {
@@ -949,11 +973,50 @@ h3 {
 
 @media (max-width: 900px) {
   .topbar {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 10px;
   }
 
   .nav {
-    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    padding: 10px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: #090e10;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity 180ms ease, transform 180ms ease;
+    backdrop-filter: blur(18px);
+  }
+
+  .topbar.menu-open .nav {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .nav a {
+    display: flex;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.035);
+    color: var(--text);
+    font-weight: 760;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
   }
 
   .hero-grid,
@@ -1001,8 +1064,25 @@ h3 {
     display: none;
   }
 
+  .menu-toggle {
+    width: auto;
+    justify-content: center;
+    padding-inline: 12px;
+    color: var(--cyan);
+    font-size: 0.82rem;
+  }
+
+  .menu-toggle span {
+    width: 4px;
+    height: 4px;
+  }
+
   .nav-cta {
     padding-inline: 12px;
+  }
+
+  .nav {
+    grid-template-columns: 1fr 1fr;
   }
 
   h1 {
